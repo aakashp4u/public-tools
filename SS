@@ -1,0 +1,551 @@
+449_RHEL_9x_SCD_v14_v15
+
+Sr. 
+No 
+Control Point 
+No. Brief of Change 
+1 2.1.1 Existing — Ensure mounting of the unused filesystems is disabled and separate 
+partitions are created (Automated) — v14 2.1.1 
+2 2.1.2 Existing — Ensure sticky bit is set on all world-writable directories (Automated) — v14 
+2.1.2 
+3 2.1.3 Existing — Disable Automounting and USB Storage (Automated) — v14 2.1.3 
+4 2.1.4 Existing — Verify System File Permissions (Automated) — v14 2.2.1 
+5 2.1.5 Existing — Ensure AIDE is installed (Automated) — v14 2.3.1 
+6 2.1.6 Existing — Additional Process Hardening (Automated) — v14 2.5.1 
+7 2.1.7 Existing — Configure SELinux (Automated) — v14 2.6.1 
+8 2.1.8 Existing — Set GNOME Warning Banner (Automated) — v14 2.7.2 
+9 2.1.9 Existing — Ensure xinetd is not installed (Automated) — v14 2.8.1 
+10 2.1.10 Existing — Time Synchronization (Automated) — v14 2.9.1 
+11 2.1.11 Existing — Check for Unconfined Daemons (Automated) — v14 2.9.2 
+12 2.1.12 Existing — Service Clients (Automated) — v14 2.10.1 
+13 2.1.13 Existing — Network Parameters (Host and Router) (Automated) — v14 2.12.1 
+14 2.1.14 Existing — Modify Network Parameters (Automated) — v14 2.13.1 
+15 2.1.15 Existing — Ensure IPv6 router advertisements are not accepted (Automated) — v14 
+2.13.2 
+16 2.1.16 Existing — Ensure no world writable files exist (Automated) — v14 2.14.2 
+17 2.1.17 Existing — Uncommon Network Protocols to be disabled (Automated) — v14 2.15.1 
+18 2.1.18 Existing — Ensure loopback traffic is configured (Automated) — v14 2.16.3 
+19 2.1.19 Existing — Ensure events that modify the system's Mandatory Access Controls are 
+collected (Automated) — v14 2.17.2 
+20 2.1.20 Existing — Cron Configuration (Automated) — v14 2.19.1 
+21 2.1.21 Existing — System File Permissions (Automated) — v14 2.23.1 
+22 2.1.22 Existing — User and Group Settings (Automated) — v14 2.24.1 
+23 2.1.23 Existing — Enable TLS 1.2 & Above protocol (Automated) — v14 2.25.2 
+24 2.1.24 Existing — Disable weak encryption protocol (Automated) — v14 2.25.3 
+25 2.1.25 Existing — Set Default Group for root Account (Automated) — v14 2.26.2 
+SBI — RHEL 9x — SCD v15.0 Internal 
+State Bank of India — Information Security Department Page 5 
+26 2.1.26 Existing — Ensure Red Hat Subscription Manager connection is configured 
+(Automated) — v14 2.27.1 
+27 2.1.27 Existing — Ensure gpgcheck is globally activated (Automated) — v14 2.27.2 
+28 2.1.28 Existing — Ensure filesystem integrity is regularly checked (Automated) — v14 2.27.3 
+29 2.1.29 Existing — Ensure latest updates, patches, and additional security software are installed 
+(Automated) — v14 2.27.4 
+30 2.1.30 New — Ensure cramfs kernel module is not available (Automated) — CIS 1.1.1.1 
+31 2.1.31 New — Ensure freevxfs kernel module is not available (Automated) — CIS 1.1.1.2 
+32 2.1.32 New — Ensure hfs kernel module is not available (Automated) — CIS 1.1.1.3 
+33 2.1.33 New — Ensure hfsplus kernel module is not available (Automated) — CIS 1.1.1.4 
+34 2.1.34 New — Ensure jffs2 kernel module is not available (Automated) — CIS 1.1.1.5 
+35 2.1.35 New — Ensure squashfs kernel module is not available (Automated) — CIS 1.1.1.6 
+36 2.1.36 New — Ensure udf kernel module is not available (Automated) — CIS 1.1.1.7 
+37 2.1.37 New — Ensure usb-storage kernel module is not available (Automated) — CIS 1.1.1.8 
+38 2.1.38 New — Ensure unused filesystems kernel modules are not available (Manual) — CIS 
+1.1.1.9 
+39 2.1.39 New — Ensure /tmp is a separate partition (Automated) — CIS 1.1.2.1.1 
+40 2.1.40 New — Ensure nodev option set on /tmp partition (Automated) — CIS 1.1.2.1.2 
+41 2.1.41 New — Ensure nosuid option set on /tmp partition (Automated) — CIS 1.1.2.1.3 
+42 2.1.42 New — Ensure noexec option set on /tmp partition (Automated) — CIS 1.1.2.1.4 
+43 2.1.43 New — Ensure /dev/shm is a separate partition (Automated) — CIS 1.1.2.2.1 
+44 2.1.44 New — Ensure nodev option set on /dev/shm partition (Automated) — CIS 1.1.2.2.2 
+45 2.1.45 New — Ensure nosuid option set on /dev/shm partition (Automated) — CIS 1.1.2.2.3 
+46 2.1.46 New — Ensure noexec option set on /dev/shm partition (Automated) — CIS 1.1.2.2.4 
+47 2.1.47 New — Ensure separate partition exists for /home (Automated) — CIS 1.1.2.3.1 
+48 2.1.48 New — Ensure nodev option set on /home partition (Automated) — CIS 1.1.2.3.2 
+49 2.1.49 New — Ensure nosuid option set on /home partition (Automated) — CIS 1.1.2.3.3 
+50 2.1.50 New — Ensure separate partition exists for /var (Automated) — CIS 1.1.2.4.1 
+51 2.1.51 New — Ensure nodev option set on /var partition (Automated) — CIS 1.1.2.4.2 
+52 2.1.52 New — Ensure nosuid option set on /var partition (Automated) — CIS 1.1.2.4.3 
+53 2.1.53 New — Ensure separate partition exists for /var/tmp (Automated) — CIS 1.1.2.5.1 
+54 2.1.54 New — Ensure nodev option set on /var/tmp partition (Automated) — CIS 1.1.2.5.2 
+55 2.1.55 New — Ensure nosuid option set on /var/tmp partition (Automated) — CIS 1.1.2.5.3 
+56 2.1.56 New — Ensure noexec option set on /var/tmp partition (Automated) — CIS 1.1.2.5.4 
+57 2.1.57 New — Ensure separate partition exists for /var/log (Automated) — CIS 1.1.2.6.1 
+58 2.1.58 New — Ensure nodev option set on /var/log partition (Automated) — CIS 1.1.2.6.2 
+59 2.1.59 New — Ensure nosuid option set on /var/log partition (Automated) — CIS 1.1.2.6.3 
+60 2.1.60 New — Ensure noexec option set on /var/log partition (Automated) — CIS 1.1.2.6.4 
+61 2.1.61 New — Ensure separate partition exists for /var/log/audit (Automated) — CIS 1.1.2.7.1 
+62 2.1.62 New — Ensure nodev option set on /var/log/audit partition (Automated) — CIS 1.1.2.7.2 
+63 2.1.63 New — Ensure nosuid option set on /var/log/audit partition (Automated) — CIS 
+1.1.2.7.3 
+64 2.1.64 New — Ensure noexec option set on /var/log/audit partition (Automated) — CIS 
+1.1.2.7.4 
+65 2.1.65 New — Ensure GPG keys are configured (Manual) — CIS 1.2.1.1 
+66 2.1.66 New — Ensure gpgcheck is globally activated (Automated) — CIS 1.2.1.2 
+67 2.1.67 New — Ensure repo_gpgcheck is globally activated (Manual) — CIS 1.2.1.3 
+68 2.1.68 New — Ensure package manager repositories are configured (Manual) — CIS 1.2.1.4 
+69 2.1.69 New — Ensure updates, patches, and additional security software are installed (Manual) 
+— CIS 1.2.2.1 
+70 2.1.70 New — Ensure SELinux is installed (Automated) — CIS 1.3.1.1 
+SBI — RHEL 9x — SCD v15.0 Internal 
+State Bank of India — Information Security Department Page 6 
+71 2.1.71 New — Ensure SELinux is not disabled in bootloader configuration (Automated) — CIS 
+1.3.1.2 
+72 2.1.72 New — Ensure SELinux policy is configured (Automated) — CIS 1.3.1.3 
+73 2.1.73 New — Ensure the SELinux mode is not disabled (Automated) — CIS 1.3.1.4 
+74 2.1.74 New — Ensure the SELinux mode is enforcing (Automated) — CIS 1.3.1.5 
+75 2.1.75 New — Ensure no unconfined services exist (Manual) — CIS 1.3.1.6 
+76 2.1.76 New — Ensure the MCS Translation Service (mcstrans) is not installed (Automated) — 
+CIS 1.3.1.7 
+77 2.1.77 New — Ensure SETroubleshoot is not installed (Automated) — CIS 1.3.1.8 
+78 2.1.78 New — Ensure bootloader password is set (Automated) — CIS 1.4.1 
+79 2.1.79 New — Ensure access to bootloader config is configured (Automated) — CIS 1.4.2 
+80 2.1.80 New — Ensure address space layout randomization is enabled (Automated) — CIS 1.5.1 
+81 2.1.81 New — Ensure ptrace_scope is restricted (Automated) — CIS 1.5.2 
+82 2.1.82 New — Ensure core dump backtraces are disabled (Automated) — CIS 1.5.3 
+83 2.1.83 New — Ensure core dump storage is disabled (Automated) — CIS 1.5.4 
+84 2.1.84 New — Ensure system wide crypto policy is not set to legacy (Automated) — CIS 1.6.1 
+85 2.1.85 New — Ensure system wide crypto policy is not set in sshd configuration (Automated) 
+— CIS 1.6.2 
+86 2.1.86 New — Ensure system wide crypto policy disables sha1 hash and signature support 
+(Automated) — CIS 1.6.3 
+87 2.1.87 New — Ensure system wide crypto policy disables macs less than 128 bits (Automated) 
+— CIS 1.6.4 
+88 2.1.88 New — Ensure system wide crypto policy disables cbc for ssh (Automated) — CIS 1.6.5 
+89 2.1.89 New — Ensure system wide crypto policy disables chacha20- poly1305 for ssh (Manual) 
+— CIS 1.6.6 
+90 2.1.90 New — Ensure system wide crypto policy disables EtM for ssh (Manual) — CIS 1.6.7 
+91 2.1.91 New — Ensure message of the day is configured properly (Automated) — CIS 1.7.1 
+92 2.1.92 New — Ensure local login warning banner is configured properly (Automated) — CIS 
+1.7.2 
+93 2.1.93 New — Ensure remote login warning banner is configured properly (Automated) — CIS 
+1.7.3 
+94 2.1.94 New — Ensure access to /etc/motd is configured (Automated) — CIS 1.7.4 
+95 2.1.95 New — Ensure access to /etc/issue is configured (Automated) — CIS 1.7.5 
+96 2.1.96 New — Ensure access to /etc/issue.net is configured (Automated) — CIS 1.7.6 
+97 2.1.97 New — Ensure GNOME Display Manager is removed (Automated) — CIS 1.8.1 
+98 2.1.98 New — Ensure GDM login banner is configured (Automated) — CIS 1.8.2 
+99 2.1.99 New — Ensure GDM disable-user-list option is enabled (Automated) — CIS 1.8.3 
+100 2.1.100 New — Ensure GDM screen locks when the user is idle (Automated) — CIS 1.8.4 
+101 2.1.101 New — Ensure GDM screen locks cannot be overridden (Automated) — CIS 1.8.5 
+102 2.1.102 New — Ensure GDM automatic mounting of removable media is disabled (Automated) 
+— CIS 1.8.6 
+103 2.1.103 New — Ensure GDM disabling automatic mounting of removable media is not 
+overridden (Automated) — CIS 1.8.7 
+104 2.1.104 New — Ensure GDM autorun-never is enabled (Automated) — CIS 1.8.8 
+105 2.1.105 New — Ensure GDM autorun-never is not overridden (Automated) — CIS 1.8.9 
+106 2.1.106 New — Ensure XDMCP is not enabled (Automated) — CIS 1.8.10 
+107 2.1.107 New — Ensure autofs services are not in use (Automated) — CIS 2.1.1 
+108 2.1.108 New — Ensure avahi daemon services are not in use (Automated) — CIS 2.1.2 
+109 2.1.109 New — Ensure dhcp server services are not in use (Automated) — CIS 2.1.3 
+110 2.1.110 New — Ensure dns server services are not in use (Automated) — CIS 2.1.4 
+111 2.1.111 New — Ensure dnsmasq services are not in use (Automated) — CIS 2.1.5 
+112 2.1.112 New — Ensure samba file server services are not in use (Automated) — CIS 2.1.6 
+SBI — RHEL 9x — SCD v15.0 Internal 
+State Bank of India — Information Security Department Page 7 
+113 2.1.113 New — Ensure ftp server services are not in use (Automated) — CIS 2.1.7 
+114 2.1.114 New — Ensure message access server services are not in use (Automated) — CIS 2.1.8 
+115 2.1.115 New — Ensure network file system services are not in use (Automated) — CIS 2.1.9 
+116 2.1.116 New — Ensure nis server services are not in use (Automated) — CIS 2.1.10 
+117 2.1.117 New — Ensure print server services are not in use (Automated) — CIS 2.1.11 
+118 2.1.118 New — Ensure rpcbind services are not in use (Automated) — CIS 2.1.12 
+119 2.1.119 New — Ensure rsync services are not in use (Automated) — CIS 2.1.13 
+120 2.1.120 New — Ensure snmp services are not in use (Automated) — CIS 2.1.14 
+121 2.1.121 New — Ensure telnet server services are not in use (Automated) — CIS 2.1.15 
+122 2.1.122 New — Ensure tftp server services are not in use (Automated) — CIS 2.1.16 
+123 2.1.123 New — Ensure web proxy server services are not in use (Automated) — CIS 2.1.17 
+124 2.1.124 New — Ensure web server services are not in use (Automated) — CIS 2.1.18 
+125 2.1.125 New — Ensure xinetd services are not in use (Automated) — CIS 2.1.19 
+126 2.1.126 New — Ensure X window server services are not in use (Automated) — CIS 2.1.20 
+127 2.1.127 New — Ensure mail transfer agents are configured for local-only mode (Automated) — 
+CIS 2.1.21 
+128 2.1.128 New — Ensure only approved services are listening on a network interface (Manual) — 
+CIS 2.1.22 
+129 2.1.129 New — Ensure ftp client is not installed (Automated) — CIS 2.2.1 
+130 2.1.130 New — Ensure ldap client is not installed (Automated) — CIS 2.2.2 
+131 2.1.131 New — Ensure nis client is not installed (Automated) — CIS 2.2.3 
+132 2.1.132 New — Ensure telnet client is not installed (Automated) — CIS 2.2.4 
+133 2.1.133 New — Ensure tftp client is not installed (Automated) — CIS 2.2.5 
+134 2.1.134 New — Ensure time synchronization is in use (Automated) — CIS 2.3.1 
+135 2.1.135 New — Ensure chrony is configured (Automated) — CIS 2.3.2 
+136 2.1.136 New — Ensure chrony is not run as the root user (Automated) — CIS 2.3.3 
+137 2.1.137 New — Ensure cron daemon is enabled and active (Automated) — CIS 2.4.1.1 
+138 2.1.138 New — Ensure permissions on /etc/crontab are configured (Automated) — CIS 2.4.1.2 
+139 2.1.139 New — Ensure permissions on /etc/cron.hourly are configured (Automated) — CIS 
+2.4.1.3 
+140 2.1.140 New — Ensure permissions on /etc/cron.daily are configured (Automated) — CIS 
+2.4.1.4 
+141 2.1.141 New — Ensure permissions on /etc/cron.weekly are configured (Automated) — CIS 
+2.4.1.5 
+142 2.1.142 New — Ensure permissions on /etc/cron.monthly are configured (Automated) — CIS 
+2.4.1.6 
+143 2.1.143 New — Ensure permissions on /etc/cron.d are configured (Automated) — CIS 2.4.1.7 
+144 2.1.144 New — Ensure crontab is restricted to authorized users (Automated) — CIS 2.4.1.8 
+145 2.1.145 New — Ensure at is restricted to authorized users (Automated) — CIS 2.4.2.1 
+146 2.1.146 New — Ensure permissions on /etc/group are configured (Automated) — CIS 7.1.3 
+147 2.1.147 New — Ensure permissions on /etc/group- are configured (Automated) — CIS 7.1.4 
+148 2.1.148 New — Ensure permissions on /etc/shells are configured (Automated) — CIS 7.1.9 
+149 2.1.149 New — Ensure no files or directories without an owner and a group exist (Automated) 
+— CIS 7.1.12 
+150 2.1.150 New — Ensure no duplicate GIDs exist (Automated) — CIS 7.2.5 
+151 2.1.151 New — Ensure no duplicate group names exist (Automated) — CIS 7.2.7 
+152 2.2.1 Existing — Ensure permissions on bootloader config are configured (Automated) — v14 
+2.4.1 
+153 2.2.2 Existing — PAM configuration (Automated) — v14 2.21.1 
+154 2.2.3 New — Ensure latest version of pam is installed (Automated) — CIS 5.3.1.1 
+155 2.2.4 New — Ensure latest version of authselect is installed (Automated) — CIS 5.3.1.2 
+156 2.2.5 New — Ensure latest version of libpwquality is installed (Automated) — CIS 5.3.1.3 
+SBI — RHEL 9x — SCD v15.0 Internal 
+State Bank of India — Information Security Department Page 8 
+157 2.2.6 New — Ensure active authselect profile includes pam modules (Automated) — CIS 
+5.3.2.1 
+158 2.2.7 New — Ensure pam_faillock module is enabled (Automated) — CIS 5.3.2.2 
+159 2.2.8 New — Ensure pam_pwquality module is enabled (Automated) — CIS 5.3.2.3 
+160 2.2.9 New — Ensure pam_pwhistory module is enabled (Automated) — CIS 5.3.2.4 
+161 2.2.10 New — Ensure pam_unix module is enabled (Automated) — CIS 5.3.2.5 
+162 2.2.11 New — Ensure password failed attempts lockout is configured (Automated) — CIS 
+5.3.3.1.1 
+163 2.2.12 New — Ensure password unlock time is configured (Automated) — CIS 5.3.3.1.2 
+164 2.2.13 New — Ensure password failed attempts lockout includes root account (Automated) — 
+CIS 5.3.3.1.3 
+165 2.2.14 New — Ensure password number of changed characters is configured (Automated) — 
+CIS 5.3.3.2.1 
+166 2.2.15 New — Ensure password length is configured (Automated) — CIS 5.3.3.2.2 
+167 2.2.16 New — Ensure password complexity is configured (Manual) — CIS 5.3.3.2.3 
+168 2.2.17 New — Ensure password same consecutive characters is configured (Automated) — CIS 
+5.3.3.2.4 
+169 2.2.18 New — Ensure password maximum sequential characters is configured (Automated) — 
+CIS 5.3.3.2.5 
+170 2.2.19 New — Ensure password dictionary check is enabled (Automated) — CIS 5.3.3.2.6 
+171 2.2.20 New — Ensure password quality is enforced for the root user (Automated) — CIS 
+5.3.3.2.7 
+172 2.2.21 New — Ensure password history remember is configured (Automated) — CIS 5.3.3.3.1 
+173 2.2.22 New — Ensure password history is enforced for the root user (Automated) — CIS 
+5.3.3.3.2 
+174 2.2.23 New — Ensure pam_pwhistory includes use_authtok (Automated) — CIS 5.3.3.3.3 
+175 2.2.24 New — Ensure pam_unix does not include nullok (Automated) — CIS 5.3.3.4.1 
+176 2.2.25 New — Ensure pam_unix does not include remember (Automated) — CIS 5.3.3.4.2 
+177 2.2.26 New — Ensure pam_unix includes a strong password hashing algorithm (Automated) — 
+CIS 5.3.3.4.3 
+178 2.2.27 New — Ensure pam_unix includes use_authtok (Automated) — CIS 5.3.3.4.4 
+179 2.2.28 New — Ensure permissions on /etc/security/opasswd are configured (Automated) — 
+CIS 7.1.10 
+180 2.2.29 New — Ensure SUID and SGID files are reviewed (Manual) — CIS 7.1.13 
+181 2.3.1 New — Ensure sudo is installed (Automated) — CIS 5.2.1 
+182 2.3.2 New — Ensure sudo commands use pty (Automated) — CIS 5.2.2 
+183 2.3.3 New — Ensure sudo log file exists (Automated) — CIS 5.2.3 
+184 2.3.4 New — Ensure users must provide password for escalation (Automated) — CIS 5.2.4 
+185 2.3.5 New — Ensure re-authentication for privilege escalation is not disabled globally 
+(Automated) — CIS 5.2.5 
+186 2.3.6 New — Ensure sudo authentication timeout is configured correctly (Automated) — CIS 
+5.2.6 
+187 2.3.7 New — Ensure access to the su command is restricted (Automated) — CIS 5.2.7 
+188 2.4.1 Existing — Remove Legacy Services (Automated) — v14 2.11.1 
+189 2.4.2 Existing — Set Shadow Password Suite Parameters (Automated) — v14 2.22.1 
+190 2.4.3 Existing — Disable System Accounts (Automated) — v14 2.26.1 
+191 2.4.4 Existing — Set Default umask for Users (Automated) — v14 2.26.3 
+192 2.4.5 New — Ensure password expiration is configured (Automated) — CIS 5.4.1.1 
+193 2.4.6 New — Ensure minimum password days is configured (Manual) — CIS 5.4.1.2 
+194 2.4.7 New — Ensure password expiration warning days is configured (Automated) — CIS 
+5.4.1.3 
+SBI — RHEL 9x — SCD v15.0 Internal 
+State Bank of India — Information Security Department Page 9 
+195 2.4.8 New — Ensure strong password hashing algorithm is configured (Automated) — CIS 
+5.4.1.4 
+196 2.4.9 New — Ensure inactive password lock is configured (Automated) — CIS 5.4.1.5 
+197 2.4.10 New — Ensure all users last password change date is in the past (Automated) — CIS 
+5.4.1.6 
+198 2.4.11 New — Ensure root is the only UID 0 account (Automated) — CIS 5.4.2.1 
+199 2.4.12 New — Ensure root is the only GID 0 account (Automated) — CIS 5.4.2.2 
+200 2.4.13 New — Ensure group root is the only GID 0 group (Automated) — CIS 5.4.2.3 
+201 2.4.14 New — Ensure root account access is controlled (Automated) — CIS 5.4.2.4 
+202 2.4.15 New — Ensure root path integrity (Automated) — CIS 5.4.2.5 
+203 2.4.16 New — Ensure root user umask is configured (Automated) — CIS 5.4.2.6 
+204 2.4.17 New — Ensure system accounts do not have a valid login shell (Automated) — CIS 
+5.4.2.7 
+205 2.4.18 New — Ensure accounts without a valid login shell are locked (Automated) — CIS 
+5.4.2.8 
+206 2.4.19 New — Ensure nologin is not listed in /etc/shells (Automated) — CIS 5.4.3.1 
+207 2.4.20 New — Ensure default user shell timeout is configured (Automated) — CIS 5.4.3.2 
+208 2.4.21 New — Ensure default user umask is configured (Automated) — CIS 5.4.3.3 
+209 2.4.22 New — Ensure permissions on /etc/passwd are configured (Automated) — CIS 7.1.1 
+210 2.4.23 New — Ensure permissions on /etc/passwd- are configured (Automated) — CIS 7.1.2 
+211 2.4.24 New — Ensure permissions on /etc/shadow are configured (Automated) — CIS 7.1.5 
+212 2.4.25 New — Ensure permissions on /etc/shadow- are configured (Automated) — CIS 7.1.6 
+213 2.4.26 New — Ensure permissions on /etc/gshadow are configured (Automated) — CIS 7.1.7 
+214 2.4.27 New — Ensure permissions on /etc/gshadow- are configured (Automated) — CIS 7.1.8 
+215 2.4.28 New — Ensure accounts in /etc/passwd use shadowed passwords (Automated) — CIS 
+7.2.1 
+216 2.4.29 New — Ensure /etc/shadow password fields are not empty (Automated) — CIS 7.2.2 
+217 2.4.30 New — Ensure all groups in /etc/passwd exist in /etc/group (Automated) — CIS 7.2.3 
+218 2.4.31 New — Ensure no duplicate UIDs exist (Automated) — CIS 7.2.4 
+219 2.4.32 New — Ensure no duplicate user names exist (Automated) — CIS 7.2.6 
+220 2.4.33 New — Ensure local interactive user home directories are configured (Automated) — 
+CIS 7.2.8 
+221 2.5.1 Existing — Enable Server firewall (Automated) — v14 2.13.3 
+222 2.5.2 Existing — Configure IP Tables/ NFtables (Automated) — v14 2.16.1 
+223 2.5.3 Existing — Ensure default deny firewall policy (Automated) — v14 2.16.2 
+224 2.5.4 Existing — SSH Server Configuration (Automated) — v14 2.20.1 
+225 2.5.5 Existing — Restrict Cipher list (Automated) — v14 2.25.1 
+226 2.5.6 New — Ensure IPv6 status is identified (Manual) — CIS 3.1.1 
+227 2.5.7 New — Ensure wireless interfaces are disabled (Automated) — CIS 3.1.2 
+228 2.5.8 New — Ensure bluetooth services are not in use (Automated) — CIS 3.1.3 
+229 2.5.9 New — Ensure dccp kernel module is not available (Automated) — CIS 3.2.1 
+230 2.5.10 New — Ensure tipc kernel module is not available (Automated) — CIS 3.2.2 
+231 2.5.11 New — Ensure rds kernel module is not available (Automated) — CIS 3.2.3 
+232 2.5.12 New — Ensure sctp kernel module is not available (Automated) — CIS 3.2.4 
+233 2.5.13 New — Ensure bogus icmp responses are ignored (Automated) — CIS 3.3.3 
+234 2.5.14 New — Ensure nftables is installed (Automated) — CIS 4.1.1 
+235 2.5.15 New — Ensure a single firewall configuration utility is in use (Automated) — CIS 4.1.2 
+236 2.5.16 New — Ensure firewalld drops unnecessary services and ports (Manual) — CIS 4.2.1 
+237 2.5.17 New — Ensure firewalld loopback traffic is configured (Automated) — CIS 4.2.2 
+238 2.5.18 New — Ensure nftables base chains exist (Automated) — CIS 4.3.1 
+239 2.5.19 New — Ensure nftables established connections are configured (Manual) — CIS 4.3.2 
+240 2.5.20 New — Ensure nftables default deny firewall policy (Automated) — CIS 4.3.3 
+SBI — RHEL 9x — SCD v15.0 Internal 
+State Bank of India — Information Security Department Page 10 
+241 2.5.21 New — Ensure nftables loopback traffic is configured (Automated) — CIS 4.3.4 
+242 2.5.22 New — Ensure permissions on /etc/ssh/sshd_config are configured (Automated) — CIS 
+5.1.1 
+243 2.5.23 New — Ensure permissions on SSH private host key files are configured (Automated) 
+— CIS 5.1.2 
+244 2.5.24 New — Ensure permissions on SSH public host key files are configured (Automated) — 
+CIS 5.1.3 
+245 2.5.25 New — Ensure sshd Ciphers are configured (Automated) — CIS 5.1.4 
+246 2.5.26 New — Ensure sshd KexAlgorithms is configured (Automated) — CIS 5.1.5 
+247 2.5.27 New — Ensure sshd MACs are configured (Automated) — CIS 5.1.6 
+248 2.5.28 New — Ensure sshd access is configured (Automated) — CIS 5.1.7 
+249 2.5.29 New — Ensure sshd Banner is configured (Automated) — CIS 5.1.8 
+250 2.5.30 New — Ensure sshd ClientAliveInterval and ClientAliveCountMax are configured 
+(Automated) — CIS 5.1.9 
+251 2.5.31 New — Ensure sshd DisableForwarding is enabled (Automated) — CIS 5.1.10 
+252 2.5.32 New — Ensure sshd GSSAPIAuthentication is disabled (Automated) — CIS 5.1.11 
+253 2.5.33 New — Ensure sshd HostbasedAuthentication is disabled (Automated) — CIS 5.1.12 
+254 2.5.34 New — Ensure sshd IgnoreRhosts is enabled (Automated) — CIS 5.1.13 
+255 2.5.35 New — Ensure sshd LoginGraceTime is configured (Automated) — CIS 5.1.14 
+256 2.5.36 New — Ensure sshd LogLevel is configured (Automated) — CIS 5.1.15 
+257 2.5.37 New — Ensure sshd MaxAuthTries is configured (Automated) — CIS 5.1.16 
+258 2.5.38 New — Ensure sshd MaxStartups is configured (Automated) — CIS 5.1.17 
+259 2.5.39 New — Ensure sshd MaxSessions is configured (Automated) — CIS 5.1.18 
+260 2.5.40 New — Ensure sshd PermitEmptyPasswords is disabled (Automated) — CIS 5.1.19 
+261 2.5.41 New — Ensure sshd PermitRootLogin is disabled (Automated) — CIS 5.1.20 
+262 2.5.42 New — Ensure sshd PermitUserEnvironment is disabled (Automated) — CIS 5.1.21 
+263 2.5.43 New — Ensure sshd UsePAM is enabled (Automated) — CIS 5.1.22 
+264 2.6.1 Existing — Command Line Warning Banners (Automated) — v14 2.7.1 
+265 2.6.2 Existing — Ensure audit logs are not automatically deleted (Automated) — v14 2.14.1 
+266 2.6.3 Existing — Ensure auditd is installed (Automated) — v14 2.17.1 
+267 2.6.4 Existing — Configure rsyslog (Automated) — v14 2.18.1 
+268 2.6.5 Existing — Logging and Auditing (Automated) — v14 2.22.2 
+269 2.6.6 New — Ensure AIDE is installed (Automated) — CIS 6.1.1 
+270 2.6.7 New — Ensure filesystem integrity is regularly checked (Automated) — CIS 6.1.2 
+271 2.6.8 New — Ensure cryptographic mechanisms are used to protect the integrity of audit tools 
+(Automated) — CIS 6.1.3 
+272 2.6.9 New — Ensure journald service is enabled and active (Automated) — CIS 6.2.1.1 
+273 2.6.10 New — Ensure journald log file access is configured (Manual) — CIS 6.2.1.2 
+274 2.6.11 New — Ensure journald log file rotation is configured (Manual) — CIS 6.2.1.3 
+275 2.6.12 New — Ensure only one logging system is in use (Automated) — CIS 6.2.1.4 
+276 2.6.13 New — Ensure systemd-journal-remote is installed (Automated) — CIS 6.2.2.1.1 
+277 2.6.14 New — Ensure systemd-journal-upload authentication is configured (Manual) — CIS 
+6.2.2.1.2 
+278 2.6.15 New — Ensure systemd-journal-upload is enabled and active (Automated) — CIS 
+6.2.2.1.3 
+279 2.6.16 New — Ensure systemd-journal-remote service is not in use (Automated) — CIS 
+6.2.2.1.4 
+280 2.6.17 New — Ensure journald ForwardToSyslog is disabled (Automated) — CIS 6.2.2.2 
+281 2.6.18 New — Ensure journald Compress is configured (Automated) — CIS 6.2.2.3 
+282 2.6.19 New — Ensure journald Storage is configured (Automated) — CIS 6.2.2.4 
+283 2.6.20 New — Ensure rsyslog is installed (Automated) — CIS 6.2.3.1 
+284 2.6.21 New — Ensure rsyslog service is enabled and active (Automated) — CIS 6.2.3.2 
+SBI — RHEL 9x — SCD v15.0 Internal 
+State Bank of India — Information Security Department Page 11 
+285 2.6.22 New — Ensure journald is configured to send logs to rsyslog (Automated) — CIS 
+6.2.3.3 
+286 2.6.23 New — Ensure rsyslog log file creation mode is configured (Automated) — CIS 6.2.3.4 
+287 2.6.24 New — Ensure rsyslog logging is configured (Manual) — CIS 6.2.3.5 
+288 2.6.25 New — Ensure rsyslog is configured to send logs to a remote log host (Manual) — CIS 
+6.2.3.6 
+289 2.6.26 New — Ensure rsyslog is not configured to receive logs from a remote client 
+(Automated) — CIS 6.2.3.7 
+290 2.6.27 New — Ensure rsyslog logrotate is configured (Manual) — CIS 6.2.3.8 
+291 2.6.28 New — Ensure access to all logfiles has been configured (Automated) — CIS 6.2.4.1 
+292 2.6.29 New — Ensure auditd packages are installed (Automated) — CIS 6.3.1.1 
+293 2.6.30 New — Ensure auditing for processes that start prior to auditd is enabled (Automated) 
+— CIS 6.3.1.2 
+294 2.6.31 New — Ensure audit_backlog_limit is sufficient (Automated) — CIS 6.3.1.3 
+295 2.6.32 New — Ensure auditd service is enabled and active (Automated) — CIS 6.3.1.4 
+296 2.6.33 New — Ensure audit log storage size is configured (Automated) — CIS 6.3.2.1 
+297 2.6.34 New — Ensure audit logs are not automatically deleted (Automated) — CIS 6.3.2.2 
+298 2.6.35 New — Ensure system is disabled when audit logs are full (Automated) — CIS 6.3.2.3 
+299 2.6.36 New — Ensure system warns when audit logs are low on space (Automated) — CIS 
+6.3.2.4 
+300 2.6.37 New — Ensure changes to system administration scope (sudoers) is collected 
+(Automated) — CIS 6.3.3.1 
+301 2.6.38 New — Ensure actions as another user are always logged (Automated) — CIS 6.3.3.2 
+302 2.6.39 New — Ensure events that modify the sudo log file are collected (Automated) — CIS 
+6.3.3.3 
+303 2.6.40 New — Ensure events that modify date and time information are collected (Automated) 
+— CIS 6.3.3.4 
+304 2.6.41 New — Ensure events that modify the system's network environment are collected 
+(Automated) — CIS 6.3.3.5 
+305 2.6.42 New — Ensure use of privileged commands are collected (Automated) — CIS 6.3.3.6 
+306 2.6.43 New — Ensure unsuccessful file access attempts are collected (Automated) — CIS 
+6.3.3.7 
+307 2.6.44 New — Ensure events that modify user/group information are collected (Automated) — 
+CIS 6.3.3.8 
+308 2.6.45 New — Ensure discretionary access control permission modification events are collected 
+(Automated) — CIS 6.3.3.9 
+309 2.6.46 New — Ensure successful file system mounts are collected (Automated) — CIS 6.3.3.10 
+310 2.6.47 New — Ensure session initiation information is collected (Automated) — CIS 6.3.3.11 
+311 2.6.48 New — Ensure login and logout events are collected (Automated) — CIS 6.3.3.12 
+312 2.6.49 New — Ensure file deletion events by users are collected (Automated) — CIS 6.3.3.13 
+313 2.6.50 New — Ensure events that modify the system's Mandatory Access Controls are collected 
+(Automated) — CIS 6.3.3.14 
+314 2.6.51 New — Ensure successful and unsuccessful attempts to use the chcon command are 
+collected (Automated) — CIS 6.3.3.15 
+315 2.6.52 New — Ensure successful and unsuccessful attempts to use the setfacl command are 
+collected (Automated) — CIS 6.3.3.16 
+316 2.6.53 New — Ensure successful and unsuccessful attempts to use the chacl command are 
+collected (Automated) — CIS 6.3.3.17 
+317 2.6.54 New — Ensure successful and unsuccessful attempts to use the usermod command are 
+collected (Automated) — CIS 6.3.3.18 
+318 2.6.55 New — Ensure kernel module loading unloading and modification is collected 
+(Automated) — CIS 6.3.3.19 
+SBI — RHEL 9x — SCD v15.0 
+Internal 
+319
+2.6.56 
+2.6.57 
+New — Ensure the audit configuration is immutable (Automated) — CIS 6.3.3.20 
+320
+New — Ensure the running and on disk configuration is the same (Manual) — CIS 
+6.3.3.21 
+321
+2.6.58 
+New — Ensure the audit log file directory mode is configured (Automated) — CIS 
+6.3.4.1 
+322
+2.6.59 
+2.6.60 
+New — Ensure audit log files mode is configured (Automated) — CIS 6.3.4.2 
+323
+New — Ensure audit log files owner is configured (Automated) — CIS 6.3.4.3 
+2.6.61 
+324
+New — Ensure audit log files group owner is configured (Automated) — CIS 6.3.4.4 
+2.6.62 
+325
+New — Ensure audit configuration files mode is configured (Automated) — CIS 6.3.4.5 
+2.6.63 
+326
+New — Ensure audit configuration files owner is configured (Automated) — CIS 6.3.4.6 
+2.6.64 
+327
+New — Ensure audit configuration files group owner is configured (Automated) — CIS 
+6.3.4.7 
+328
+2.6.65 
+2.6.66 
+New — Ensure audit tools mode is configured (Automated) — CIS 6.3.4.8 
+329
+New — Ensure audit tools owner is configured (Automated) — CIS 6.3.4.9 
+2.6.67 
+330
+New — Ensure audit tools group owner is configured (Automated) — CIS 6.3.4.10 
+2.6.68 
+331
+New — Ensure local interactive user dot files access is configured (Automated) — CIS 
+7.2.9
+
+
+
+
+449_RHEL_9x_v14
+
+1. Introduction ................................................................................................................................................... 5  
+1.1. Purpose of this document ............................................................................................................... 5  
+1.2. Instructions .................................................................................................................................... 5  
+1.2.1. How to use this document ....................................................................................................... 5  
+1.2.2. Version Control ....................................................................................................................... 5  
+2. Configuration Controls .................................................................................................................................. 6  
+2.1. Filesystem Configuration ............................................................................................................... 6  
+2.1.1. Ensure mounting of the unused filesystems is disabled and separate partitions are created. ............. 
+6
+2.1.2. Ensure sticky bit is set on all world-writable directories ................................................................... 6  
+2.1.3. Disable Automounting and USB Storage ......................................................................................... 7  
+2.2. File System Settings ....................................................................................................................... 7  
+2.2.1. Verify System File Permissions ....................................................................................................... 7  
+2.3. Filesystem Integrity Checking .......................................................................................................8  
+2.3.1. Ensure AIDE is installed .................................................................................................................8  
+2.4. Secure Boot Settings ....................................................................................................................... 9  
+2.4.1. Ensure permissions on bootloader config are configured ................................................................. 9  
+2.5. Additional Process Hardening ....................................................................................................... 9  
+2.5.1. Additional Process Hardening ........................................................................................................ 9  
+2.6. Mandatory Access Control (MAC) ............................................................................................... 10  
+2.6.1. Configure SELinux ....................................................................................................................... 10  
+2.7. Warning Banners ......................................................................................................................... 10  
+2.7.1. Command Line Warning Banners ................................................................................................. 10  
+2.7.2. Set GNOME Warning Banner ........................................................................................................ 11  
+2.8. inetd services ................................................................................................................................ 12  
+2.8.1. Ensure xinetd is not installed ........................................................................................................ 12  
+2.9. Special Purpose Services .............................................................................................................. 12  
+2.9.1. Time Synchronization .................................................................................................................. 12  
+2.9.2. Check for Unconfined Daemons ................................................................................................... 13  
+2.10. Service Clients .......................................................................................................................... 14  
+2.10.1. Service Clients ............................................................................................................................ 14  
+2.11. OS Services ............................................................................................................................... 14  
+2.11.1. Remove Legacy Services .............................................................................................................. 14  
+2.12. Network Parameters ................................................................................................................ 15  
+2.12.1. Network Parameters (Host and Router) ....................................................................................... 15  
+2.13. Network Configuration and Firewalls ..................................................................................... 15  
+Approved Annexure
+Note Id: NT/NFIN/CC/GCRO/ISD/20251003/MOWA-4470
+ 
+3
+State Bank of India - SCD v14.3 of RHEL 9x 
+2.13.1. Modify Network Parameters ........................................................................................................ 15  
+2.13.2. Ensure IPv6 router advertisements are not accepted ................................................................... 16  
+2.13.3. Enable Server firewall ................................................................................................................. 17  
+2.14. System Access, Authentication and Authorization .................................................................. 17  
+2.14.1. Ensure audit logs are not automatically deleted ........................................................................... 17  
+2.14.2. Ensure no world writable files exist ............................................................................................. 18  
+2.15. Uncommon Network Protocols ................................................................................................ 18  
+2.15.1. Uncommon Network Protocols to be disabled .............................................................................. 18  
+2.16. Firewall Configuration ............................................................................................................. 19  
+2.16.1. Configure IP Tables/ NFtables............................................................................................................. 19  
+2.16.2. Ensure default deny firewall policy ............................................................................................. 20  
+2.16.3. Ensure loopback traffic is configured ......................................................................................... 20  
+2.17. Configure System Accounting .................................................................................................. 21  
+2.17.1. Ensure auditd is installed ............................................................................................................ 21  
+2.17.2. Ensure events that modify the system's Mandatory Access Controls are collected ......................... 21  
+2.18. Configure Logging .................................................................................................................... 22  
+2.18.1. Configure rsyslog ........................................................................................................................ 22  
+2.19. Configure cron .......................................................................................................................... 23  
+2.19.1. Cron Configuration .................................................................................................................... 23  
+2.20. SSH Server Configuration ........................................................................................................ 23  
+2.20.1. SSH Server Configuration ........................................................................................................... 23  
+2.21. Configure PAM ......................................................................................................................... 24  
+2.21.1. PAM configuration ..................................................................................................................... 24  
+2.22. User Accounts and Environment ............................................................................................. 25  
+2.22.1. Set Shadow Password Suite Parameters ...................................................................................... 25  
+2.22.2. Logging and Auditing ................................................................................................................. 26  
+2.23. System File Permissions ........................................................................................................... 27  
+2.23.1. System File Permissions ............................................................................................................. 27  
+2.24. User and Group Settings ......................................................................................................... 28  
+2.24.1. User and Group Settings ............................................................................................................ 28  
+2.25. Encryption ................................................................................................................................ 29  
+2.25.1. Restrict Cipher list ...................................................................................................................... 29  
+2.25.2. Enable TLS 1.2 & Above protocol ................................................................................................ 29  
+2.26. Security Settings .......................................................................................................................30  
+2.26.1. Disable System Accounts ........................................................................................................... 30  
+2.26.2. Set Default Group for root Account ............................................................................................. 31  
+2.26.3. Set Default umask for Users ....................................................................................................... 31  
+2.27. Install Updates, Patches and Additional Security Software ................................................... 32  
+Approved Annexure
+Note Id: NT/NFIN/CC/GCRO/ISD/20251003/MOWA-4470
+ 
+4
+State Bank of India - SCD v14.3 of RHEL 9x 
+2.27.1. Ensure Red Hat Subscription Manager connection is configured ................................................. 32  
+2.27.2. Ensure gpgcheck is globally activated.......................................................................................... 33  
+2.27.3. Ensure filesystem integrity is regularly checked .......................................................................... 33  
+2.27.4. Ensure latest updates, patches, and additional security software are installed .............................. 33  
+3. Appendix ...................................................................................................................................................... 35  
