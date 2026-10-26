@@ -1,5 +1,5 @@
 449_RHEL_9x_SCD_v14_v15
-
+(echo '"Username","UID","GID","Home","Shell","Password_Status","Last_Password_Change","Account_Expiry","Last_Login"'; getent passwd | while IFS=: read -r u x uid gid gecos home shell; do p=$(passwd -S "$u" 2>/dev/null | awk '{print $2}'); c=$(chage -l "$u" 2>/dev/null | awk -F': ' '/Last password change/{print $2}'); e=$(chage -l "$u" 2>/dev/null | awk -F': ' '/Account expires/{print $2}'); l=$(lastlog -u "$u" 2>/dev/null | tail -1 | awk '{$1=""; sub(/^ /,""); print}'); printf '"%s","%s","%s","%s","%s","%s","%s","%s","%s"\n' "$u" "$uid" "$gid" "$home" "$shell" "$p" "$c" "$e" "$l"; done) > "/tmp/user_inventory_$(date +%F_%H%M%S).csv"
 Sr. 
 No 
 Control Point 
